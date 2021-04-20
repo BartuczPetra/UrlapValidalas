@@ -23,29 +23,65 @@ header{
 nav{
     grid-area: n;
     background-color: aquamarine;
-    display: grid;
-    grid-template-columns:1fr;
-    grid-gap:0;
-    width: 100px;
 }
-
+nav a{
+    display: block;
+    padding-top: 5px;   
+    margin-right: 50px;
+    margin-left: 5px;
+    text-decoration: none;
+}
 article{
     grid-area: a;
     background-color: #ffcc99;
+    padding: 5px;
 }
+
 aside{
     grid-area: s;
-    background-color: #99ccff;
+    background-color:#3399ff;
+    padding: 5px;
 }
 footer{
     grid-area: f;
     background-color: #ffcccc;
+    padding: 5px;
 }
 header h1{
     text-align: center;
 }
+section{
+    background-color: beige;
+    border: 1px solid black;
+    margin: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+fieldset,label, input{
+    margin-bottom: 10px;
+}
+fieldset{    
+    text-align: right;
+}
+#email1Label, #email1{
+    margin-bottom: 0px !important;
+}
+#prioritas{
+    text-align: left;
+}
 
-@media screen and (max-width:600px){
+#kuldGomb{
+    text-align: right;
+}
+#kuld{
+   padding: 2px 80px 2px 80px;
+}
+#torol{
+    padding: 2px 20px 2px 20px;
+}
+
+
+@media screen and (max-width:800px){
     main{
     grid-template-areas:
         "h"
@@ -54,7 +90,24 @@ header h1{
         "s"
         "f";
     }
-    body, main, header, nav, aside, article, footer{
-        width: 100%
+    nav{
+        text-align: center;
     }
+    nav a{
+        margin: 0;
+    }
+    fieldset input{
+        width: 100%;
+    }
+    fieldset{        
+        text-align: left;
+    }
+    #gombok, #kuldGomb{
+        width: 100%;
+        text-align: center;
+    }
+    body, main, header, nav, aside, article, footer{
+        width: 90%;        
+    }
+    
 }
